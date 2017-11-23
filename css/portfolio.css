@@ -1,0 +1,14 @@
+.portfolioLayout li {
+    background-color: #FAFFFC;
+	display: inline-block;
+    box-sizing: border-box;
+    border: 8px solid black;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    padding: 16px;
+    width: 45%;
+}
+
+.portfolioLayout img {
+    width: 100%;
+}
