@@ -1,120 +1,175 @@
-.centralizer {
-	width: 720px;
-	margin: auto;
-    padding: 30px 0;
-    padding-bottom: 80px;
+html {
+    font-size: 120%;
 }
 
 body {
 	font-family: "Crimson Text", "Times New Roman", serif;
 	background-color: #F2FFFC;
-    font-size: 120%;
 	line-height: 1.5;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main {
+    width: calc(100% - 0.9 * 300px);
+}
+
+main a {
+	color: #851944;
+}
+main a:hover,
+main a:focus  {
+    color: red;
 }
 
 .mainTitle {
-    font-size: 60px;
+    font-size: 3em;
 	font-family: "Open Sans Condensed", "Arial", sans-serif;
 	text-align: center;
     text-transform: uppercase;
 	background-color: #851944;
 	color: #FFF;
-	padding: 25px;
-	border-bottom: 10px solid black;
+    position: relative;
+	padding: .5em;
+	border-bottom: .5rem solid black;
+    text-shadow: 5px 5px black;
+}
+
+.mainContent {
+	width: 65%; /* Como definir? */
+	margin: auto;
+    padding: 1.5em 0;
+    padding-bottom: 4em;
+    position: relative;
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 1.5em;
 	font-family: "Open Sans Condensed", "Arial", sans-serif;
     clear: both;
 }
 
 p {
 	text-align: justify;
-    margin: 20px 0;
-}
-
-main {
-    float: left;
-    width: 80%;
-}
-
-main a {
-	color: #851944;
+    margin: 1em 0;
 }
 
 .linksArea {
 	text-align: center;
 	background-color: #3C1D3D;
 	color: #F2FFFC;
-    padding: 0;
-    width: 20%;
-    position: relative;
-    top: 310px;
-    right: 0;
+    width: calc(0.9 * 300px);
+    padding-top: calc(300px + 1em);
+}
+
+.linksArea a:hover,
+.linksArea a:focus {
+    text-shadow: 0 0 2px pink;
 }
 
 .linksArea, .mainImage {
-    float: right;
     box-sizing: border-box;
-	border-left: 10px solid black;
-	border-bottom: 10px solid black;
 }
 
 .mainImage {
+    width: 300px;
     position: absolute;
     top: 0;
     right: 0;
+	border-left: .5rem solid black;
+	border-bottom: .5rem solid black;
 }
 
 .linksArea h1 {
 	font-family: "Open Sans Condensed", "Arial", sans-serif;
-    font-size: 24px;
-    margin: 8px 0;
-}
-
-.linksArea li {
-	color: inherit;
-	font-family: "Open Sans Condensed", sans-serif;
+    font-size: 1.5em;
+    margin: .5em 0;
+    text-shadow: 5px 5px black;
 }
 
 .links a {
 	color: inherit;
+	font-family: "Open Sans Condensed", sans-serif;
     text-transform: lowercase;
 }
 
 .linksSocialMedia li {
     display: inline-block;
-    padding-bottom: 16px;
+    padding-bottom: 1em;
 }
 
 .linksSocialMedia a {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 40px;  /* Melhor jeito? */
+    height: 40px; /* Melhor jeito? */
     font-size: 0;
+    position: relative;
+}
+
+.linksSocialMedia a:hover::before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    background-color: black;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(.5em) rotate(45deg);
+}
+
+.linksSocialMedia a:hover::after {
+    content: attr(data-legenda);
+    background-color: black;
+    color: white;
+    width: 300%;
+    font-size: .75rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
 }
 
 .Github {
     background-image: url(../img/github.png);
+    background-size: contain;
 }
 
 .Twitter {
     background-image: url(../img/twitter.png);
+    background-size: contain;
 }
 
 .Linkedin {
     background-image: url(../img/linkedin.png);
+    background-size: contain;
 }
 
 #footFooter {
-    background-color: #000;
-    color: #F2FFFC;
-    padding: 10px;
+    width: 100%;
+    padding: .5em;
     clear: both;
+    color: #F2FFFC;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    
+    background-size: 25% 100%;
+    background-repeat: no-repeat;
+    background-image: radial-gradient(ellipse at left bottom,
+        rgba(60, 29, 61, 0.8),
+        rgba(60, 29, 61, 0.8) 65%,
+        black 65%,
+        black 70%,
+        transparent 70%,
+        transparent);
+    
+    text-shadow: 2px 2px black;
+}
+
+#footFooter a {
+    color: #F99;
+}
+#footFooter a:hover,
+#footFooter a:focus {
+    color: red;
 }
 
 strong {

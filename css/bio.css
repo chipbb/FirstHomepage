@@ -1,10 +1,24 @@
 .bioQuotes {
 	background-color: #D9E5E3;
-	border: 10px solid #C2CCCA;
-	width: 250px;
+	border: .5rem solid #C2CCCA;
+	width: 30ch;
 	box-sizing: border-box;
-    margin: 20px 0;
-    padding: 20px;
+    margin: 1em 0;
+    padding: 1em;
+    transition: box-shadow 1s, transform 1s;
+    transition-delay: 1s, 0s;
+}
+
+.bioQuotes::before {
+    content: '"';
+    font-size: 10em;
+    line-height: .8;
+    color: #bbb;
+    position: absolute;
+}
+
+.bioQuotes > p {
+    position: relative;
 }
 
 cite {
@@ -12,12 +26,70 @@ cite {
     font-style: italic;
 }
 
-.fiat {
-    float: right;
-    margin-left: 20px;
+.bioQuotes:hover,
+.bioQuotes:focus {
+    box-shadow: 0 0 0 99999px rgba(0, 0, 0, .8);
+    transition-delay: 0s, 1s;
 }
 
-.petrobrás {
+blockquote:nth-of-type(odd) {
+    float: right;
+    margin-left: 2em;
+}
+
+blockquote:nth-of-type(odd):hover,
+blockquote:nth-of-type(odd):focus {
+    transform: scale(1.2) rotate(5deg);
+    transition-delay: 0s, 1s;
+}
+
+blockquote:nth-of-type(even) {
     float: left;
-    margin-right: 20px;
+    margin-right: 2em;
+}
+
+blockquote:nth-of-type(even):hover,
+blockquote:nth-of-type(even):focus {
+    transform: scale(1.2) rotate(-5deg);
+    transition-delay: 0s, 1s;
+}
+
+.mainContent > p::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+    color: #3C1D3D;
+    text-shadow: 1px 1px #000;
+    margin-right: .2ch;
+    line-height: 1;
+}
+
+.skillTable {
+    margin: 1em 0;
+    border-collapse: separate;
+    border-spacing: 0.25em;
+}
+
+.skillTable th {
+    padding: 1em;
+    background-color: #3C1D3D;
+    color: white;
+    font-weight: bold;
+}
+
+.skillTable tbody th {
+    background-color: #851944;
+}
+
+.skillTable td {
+    padding: 1em;
+    background-color: #EEE;
+}
+
+.skillTable [colspan] {
+    text-align: center;
+    font-style: italic;
+}
+
+.skillTable [rowspan] {
+    vertical-align: middle;
 }

@@ -1,0 +1,400 @@
+/*.popupBox {
+    width: 40%;
+    background-color: #FFF;
+    
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.75);
+    
+    padding: 10% 3%;
+    text-align: center;
+    font-size: 2em;
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}*/
+
+.mainPicture {
+    height: 200px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    box-shadow: 0 0 2em black;
+}
+
+main {
+    width: 100%;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    perspective: 10px;
+    perspective-origin: 50% 160px;
+    display: block;
+}
+
+.mainTitle, .palavras-chave {
+    transform-style: preserve-3d;
+}
+
+.mainTitle h2 {
+    text-transform: none;
+    font-size: .5em;
+}
+
+.banner {
+    width: 14em;
+    line-height: 1;
+    padding: 1em 0;
+    box-sizing: border-box;
+
+    text-align: center;
+    text-decoration: none;
+    background-color: #3C1D3D;
+    color: white;
+    border: .25em solid black;
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform-origin: 0 0;
+    transform: translate(calc(0.707 * (3.5em - 100%) + 100%), calc(-0.707 * 3.5em)) rotate(45deg);
+    
+    animation: fade 1s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+}
+
+.palavras-chave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: aparece 2s;
+}
+
+@keyframes aparece {
+    0% {
+        transform: scale(0.001);
+    }
+}
+
+.palavras-chave li {
+    font-size: 200%;
+    font-weight: bold;
+    text-transform: none;
+    color: #D5447E;
+	font-family: "Shadows Into Light", cursive;
+}
+
+.eficiencia {
+    position: absolute;
+    top: 55%;
+    left: 70%;
+    transform: translate(-50%, -50%) rotate(-5deg) translateZ(4px) scale(.25);
+    opacity: .6;
+}
+
+.boas-praticas {
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    transform: translate(-50%, -50%) rotate(10deg) translateZ(1px) scale(.25);
+    opacity: .6;
+}
+
+.codigo-limpo {
+    position: absolute;
+    top: 45%;
+    left: 25%;
+    transform: translate(-50%, -50%) rotate(-10deg) translateZ(2px) scale(.25);
+    opacity: .6;
+}
+
+.css3 {
+    position: absolute;
+    top: 55%;
+    left: 35%;
+    transform: translate(-50%, -50%) rotate(5deg) translateZ(2px) scale(.25);
+    opacity: .9;
+}
+
+.html5 {
+    position: absolute;
+    top: 30%;
+    left: 75%;
+    transform: translate(-50%, -50%) rotate(10deg) translateZ(2px) scale(.25);
+    opacity: .9;
+}
+
+.javascript {
+    position: absolute;
+    top: 15%;
+    left: 65%;
+    transform: translate(-50%, -50%) rotate(-5deg) translateZ(1px) scale(.25);
+    opacity: .9;
+}
+
+.acessibilidade {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    transform: translate(-50%, -50%) rotate(-5deg) translateZ(3px) scale(.25);
+    opacity: .8;
+}
+
+.responsivo {
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    transform: translate(-50%, -50%) rotate(10deg) translateZ(3px) scale(.25);
+    opacity: .3;
+}
+
+.otimizacoes {
+    position: absolute;
+    top: 75%;
+    left: 70%;
+    transform: translate(-50%, -50%) rotate(-5deg) translateZ(2px) scale(.25);
+    opacity: .3;
+}
+
+.agilidade {
+    position: absolute;
+    top: 75%;
+    left: 30%;
+    transform: translate(-50%, -50%) rotate(5deg) translateZ(1px) scale(.25);
+    opacity: .3;
+}
+
+.design {
+    position: absolute;
+    top: 45%;
+    left: 65%;
+    transform: translate(-50%, -50%) rotate(10deg) translateZ(2px) scale(.25);
+    opacity: .3;
+}
+
+.saudacao p {
+    font-size: 1em;
+    color: #99A;
+    line-height: 1;
+    padding: 0 2em;
+    margin-left: 4em;
+}
+
+.saudacao-inicio {
+    font-size: 3em;
+    color: #889;
+}
+
+.saudacao-ultima-linha {
+    text-align: right;
+    display: block;
+    padding: 1em;
+    margin-right: 4em;
+}
+
+.saudacao strong {
+    font-size: 2em;
+    color: #000;
+}
+
+.saudacao em {
+    color: #851944;
+    font-size: 4em;
+    transform: skew(-10deg) rotate(-5deg);
+    display: inline-block;
+    position: relative;
+    animation: flutua 1s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes flutua {
+    from {
+        top: -10px;
+    }
+    to {
+        top: 10px;
+    }
+}
+
+.saudacao:hover em,
+.saudacao:focus em {
+    animation-play-state: paused;
+}
+
+.botao-index {
+    font-size: 1em;
+    background-color: #851944;
+    box-shadow: 0 0 1em #000, inset 0 0 .5em #D5447E;
+    color: #FFF;
+    padding: .5em;
+    border: .2em solid black;
+    width: 40ch;
+    margin: 1em auto;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.botao-index:hover,
+.botao-index:focus {
+    box-shadow: 0 0 1em #FA9;
+    background-color: #C54974;
+    color: #FFF;
+}
+
+.secao-inicio {
+    padding: 2em;
+}
+
+.secao-inicio h2 {
+    font-size: 3em;
+    text-shadow: 5px 5px #000;
+    text-transform: uppercase;
+    margin-bottom: .5em;
+}
+
+.trabalhos {
+    background-color: #3C1D3D;
+    border-top: .5em solid #000;
+    border-bottom: .5em solid #000;
+    
+    background-image: linear-gradient(45deg,
+        transparent,
+        transparent 14px,
+        rgba(0, 0, 0, 0.1) 14px,
+        rgba(0, 0, 0, 0.1) 15px,
+        transparent 15px,
+        transparent);
+    background-size: 20px 20px;
+    background-attachment: fixed;
+}
+
+.trabalhos h2 {
+    color: #FFF;
+}
+
+.trabalhos ul {
+    display: flex;
+}
+
+.trabalhos li {
+    border: .5em solid #000;
+    flex: 1;
+}
+
+.trabalhos li:first-child {
+    order: 2;
+    transform: scale(1.2);
+}
+
+.trabalhos li:nth-child(2) {
+    order: 1;
+}
+
+.trabalhos li:last-child {
+    order: 3;
+}
+
+.trabalhos img {
+    width: 100%;
+    display: block;
+    box-shadow: 0 0 4px #000;
+}
+
+.blog {
+    background-color: #999;
+    color: #FFF;
+    border-bottom: .5em solid #851944;
+    position: relative;
+    
+    
+    background-image: linear-gradient(135deg,
+        transparent,
+        transparent 14px,
+        rgba(255, 255, 255, 0.1) 14px,
+        rgba(255, 255, 255, 0.1) 15px,
+        transparent 15px,
+        transparent);
+    background-size: 20px 20px;
+    background-attachment: fixed;
+}
+
+.blog small {
+    position: relative;
+    top: -2em;
+}
+
+.blog li {
+    width: 30%;
+}
+
+.blog li a {
+    color: #FCF;
+    padding: .5em;
+    display: block;
+}
+
+.blog-post {
+    display: none;
+    
+    width: 65%;;
+    height: 6em;
+    
+    font-size: 1em;
+    padding: 1em;
+    
+    background-color: #CCC;
+    color: #851944;
+    
+    position: absolute;
+    bottom: 5.5em;
+    right: 4em;
+}
+
+.blog li a:hover {
+    background-color: #CCC;
+    color: #F26;
+}
+
+.blog li a:hover + .blog-post,
+.blog li a:focus + .blog-post {
+    display: block;
+}
+
+#indexFooter {
+    width: 100%;
+    clear: both;
+    color: #F2FFFC;
+    background-color: #000;
+    padding: 1em;
+}
+
+#indexFooter a {
+    color: #F99;
+}
+#indexFooter a:hover,
+#indexFooter a:focus  {
+    color: red;
+}
+
+#indexFooter h2 {
+    font-size: 2em;
+}

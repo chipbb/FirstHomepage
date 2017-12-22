@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Blog - João da Silva</title>
+        <title>Contato - João da Silva</title>
         <meta charset="utf-8">
         <link rel="icon" href="img/favicon.png">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/site.css">
-        <link rel="stylesheet" href="css/blog.css">
+        <link rel="stylesheet" href="css/contato.css">
         <!-- carrega a fonte Crimson Text nas versões normal, itálico e negrito -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
         <!-- carrega a fonte Open Sans Condensed na versão negrito, -->
@@ -16,45 +16,51 @@
     
     <body>
         <main>
-            <h1 class="mainTitle">Blog</h1>
+            <h1 class="mainTitle">Contato</h1>
             
             <div class="mainContent">
-                
-                <article>
-                    <h2>O essencial de design responsivo</h2>
+                <form>
+                    <fieldset>
+                        <legend>Dados Pessoais</legend>
+                        
+                        <label for="nome">Nome</label>
+                        <input id="nome" name="nome" placeholder="Seu nome aqui!" type="text" pattern="[A-Za-z ']{4,}" title="O nome precisa conter pelo menos 4 caracteres!" autofocus required>
+                        
+                        <label for="e-mail">E-mail</label>
+                        <input id="e-mail" name="e-mail" placeholder="seu@email.com" type="email" required>
+                    </fieldset>
                     
-                    <time datetime="2017-11-14">14 de novembro de 2017</time>
-
-                    <p>Design responsivo tem ganho cada vez mais atenção como técnica de desenvolvimento de páginas web para dispositivos móveis. Mas como começar?</p>
-
-                    <a class="moreInfo" href="#">Leia mais</a>
+                    <fieldset>
+                        <legend>Assunto</legend>
+                        
+                        <label>
+                            <input value="blog" name="assunto" type="radio">
+                            Blog
+                        </label>
+                        
+                        <label>
+                            <input value="serviço" name="assunto" type="radio">
+                            Serviço
+                        </label>
                     
-                    <footer>Tags: <a href="#">design responsivo</a>, <a href="#">mobile</a>, <a href="#">css</a></footer>
-                </article>
-                
-                <article>
-                    <h2>Por que fazer páginas acessíveis?</h2>
+                        <fieldset>
+                            <label>
+                                <input value="outro" name="assunto" type="radio">
+                                Outro
+                                <input name="outro" placeholder="Seu assunto aqui!">
+                            </label>
+                        </fieldset>
+                    </fieldset>
                     
-                    <time datetime="2017-11-14">14 de novembro de 2017</time>           
-
-                    <p>Tem se falado cada vez sobre acessibilidade na web. Há diversas técnicas e diretivas a serem seguidas, inclusive da própria W3C. Mas vale a pena investir nisso?</p>
-
-                    <a class="moreInfo" href="#">Leia mais</a>
+                    <fieldset>
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Digite aqui a sua mensagem!" cols="60" rows="6" required></textarea>
+                    </fieldset>
                     
-                    <footer>Tags: <a href="#">acessibilidade</a>, <a href="#">boas práticas</a></footer>
-                </article>
-
-                <article>
-                    <h2>JavaScript não obstrusivo</h2>
-                    
-                    <time datetime="2017-11-14">14 de novembro de 2017</time>
-
-                    <p>JavaScript é uma linguagem essencial hoje em dia para criar páginas ricas, interativas e dinâmicas. Porém, há alguns cuidados que devem ser tomados ao colocarmos código JavaScript em nossas páginas.</p>
-
-                    <a class="moreInfo" href="#">Leia mais</a>
-                    
-                    <footer>Tags: <a href="#">javascript</a>, <a href="#">boas práticas</a></footer>
-                </article>            
+                    <fieldset>
+                        <button type="submit">Enviar</button>
+                    </fieldset>
+                </form>
             </div>
         </main>
             
