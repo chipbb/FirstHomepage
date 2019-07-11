@@ -88,9 +88,17 @@ body {
 
 @keyframes aparece {
     0% {
-        opacity: 0;
         transform: scale(0.001);
     }
+}
+
+.palavra-home {
+  animation: apareceFilho 2s linear;
+}
+@keyframes apareceFilho {
+  from {
+    opacity: 0;
+  }
 }
 
 .palavras-chave li {
