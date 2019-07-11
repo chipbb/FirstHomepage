@@ -83,7 +83,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    animation: aparece 2s;
 }
 
 @keyframes aparece {
@@ -107,6 +106,7 @@ body {
     left: 70%;
     transform: translate(-50%, -50%) rotate(-5deg) translateZ(4px) scale(.25);
     opacity: .6;
+    animation: aparece 2s;
 }
 
 .boas-praticas {
@@ -115,6 +115,7 @@ body {
     left: 15%;
     transform: translate(-50%, -50%) rotate(10deg) translateZ(1px) scale(.25);
     opacity: .6;
+    animation: aparece 2s;
 }
 
 .codigo-limpo {
@@ -123,6 +124,7 @@ body {
     left: 25%;
     transform: translate(-50%, -50%) rotate(-10deg) translateZ(2px) scale(.25);
     opacity: .6;
+    animation: aparece 2s;
 }
 
 .css3 {
@@ -131,6 +133,7 @@ body {
     left: 35%;
     transform: translate(-50%, -50%) rotate(5deg) translateZ(2px) scale(.25);
     opacity: .9;
+    animation: aparece 2s;
 }
 
 .html5 {
@@ -139,6 +142,7 @@ body {
     left: 75%;
     transform: translate(-50%, -50%) rotate(10deg) translateZ(2px) scale(.25);
     opacity: .9;
+    animation: aparece 2s;
 }
 
 .javascript {
@@ -147,6 +151,7 @@ body {
     left: 65%;
     transform: translate(-50%, -50%) rotate(-5deg) translateZ(1px) scale(.25);
     opacity: .9;
+    animation: aparece 2s;
 }
 
 .acessibilidade {
@@ -155,6 +160,7 @@ body {
     left: 25%;
     transform: translate(-50%, -50%) rotate(-5deg) translateZ(3px) scale(.25);
     opacity: .8;
+    animation: aparece 2s;
 }
 
 .responsivo {
@@ -163,6 +169,7 @@ body {
     left: 40%;
     transform: translate(-50%, -50%) rotate(10deg) translateZ(3px) scale(.25);
     opacity: .3;
+    animation: aparece 2s;
 }
 
 .otimizacoes {
@@ -171,6 +178,7 @@ body {
     left: 70%;
     transform: translate(-50%, -50%) rotate(-5deg) translateZ(2px) scale(.25);
     opacity: .3;
+    animation: aparece 2s;
 }
 
 .agilidade {
@@ -179,6 +187,7 @@ body {
     left: 30%;
     transform: translate(-50%, -50%) rotate(5deg) translateZ(1px) scale(.25);
     opacity: .3;
+    animation: aparece 2s;
 }
 
 .design {
@@ -187,6 +196,7 @@ body {
     left: 65%;
     transform: translate(-50%, -50%) rotate(10deg) translateZ(2px) scale(.25);
     opacity: .3;
+    animation: aparece 2s;
 }
 
 .saudacao p {
